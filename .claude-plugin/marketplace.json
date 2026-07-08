@@ -1,0 +1,22 @@
+{
+  "name": "tfm-collab",
+  "owner": {
+    "name": "Topface Media",
+    "url": "https://github.com/TFM-OAA"
+  },
+  "metadata": {
+    "description": "Collaboration LOCK for Claude Code projects synced via Google Drive.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "collab",
+      "source": "./plugins/collab",
+      "description": "setup-collab: автоматический LOCK-замок (WORKING_NOW.txt) на хуках Claude Code + /lock–/unlock, для работы по очереди в папках, синхронизируемых через Google Drive.",
+      "version": "1.0.0",
+      "category": "collaboration",
+      "keywords": ["collab", "google-drive", "lock", "hooks", "turn-taking"],
+      "author": { "name": "Topface Media" }
+    }
+  ]
+}

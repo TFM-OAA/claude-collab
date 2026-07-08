@@ -1,0 +1,10 @@
+{
+  "name": "collab",
+  "version": "1.0.0",
+  "description": "Автоматический LOCK-замок совместной работы (WORKING_NOW.txt) на хуках Claude Code + команды /lock–/unlock, для работы по очереди в папках, синхронизируемых через Google Drive.",
+  "author": {
+    "name": "Topface Media"
+  },
+  "homepage": "https://github.com/TFM-OAA/claude-collab",
+  "keywords": ["collab", "google-drive", "lock", "hooks", "turn-taking"]
+}

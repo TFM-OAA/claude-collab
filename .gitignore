@@ -1,0 +1,4 @@
+WORKING_NOW*.txt
+.claude/settings.local.json
+Thumbs.db
+.DS_Store
