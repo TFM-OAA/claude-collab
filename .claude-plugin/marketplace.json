@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Collaboration LOCK for Claude Code projects synced via Google Drive.",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "collab",
       "source": "./plugins/collab",
-      "description": "setup-collab: автоматический LOCK-замок (WORKING_NOW.txt) на хуках Claude Code + /lock–/unlock, для работы по очереди в папках, синхронизируемых через Google Drive.",
-      "version": "1.0.0",
+      "description": "Автоматический LOCK-замок (WORKING_NOW.txt) на хуках Claude Code + /lock–/unlock, для работы по очереди в папках, синхронизируемых через Google Drive. Always-on-хук (Windows) ставит замок сам в каждой папке.",
+      "version": "1.1.0",
       "category": "collaboration",
       "keywords": ["collab", "google-drive", "lock", "hooks", "turn-taking"],
       "author": { "name": "Topface Media" }
