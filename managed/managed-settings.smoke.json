@@ -1,0 +1,15 @@
+﻿{
+    "hooks":  {
+                  "SessionStart":  [
+                                       {
+                                           "matcher":  "startup|resume|clear",
+                                           "hooks":  [
+                                                         {
+                                                             "type":  "command",
+                                                             "command":  "powershell.exe -NoProfile -ExecutionPolicy Bypass -EncodedCommand JABwACAAPQAgAEoAbwBpAG4ALQBQAGEAdABoACAAJABlAG4AdgA6AEMATABBAFUARABFAF8AUABSAE8ASgBFAEMAVABfAEQASQBSACAAIgAuAG0AZwBtAHQAXwBoAG8AbwBrAF8AbwBrAC4AdAB4AHQAIgA7ACAAUwBlAHQALQBDAG8AbgB0AGUAbgB0ACAALQBMAGkAdABlAHIAYQBsAFAAYQB0AGgAIAAkAHAAIAAtAFYAYQBsAHUAZQAgACgAIgBtAGEAbgBhAGcAZQBkACAAaABvAG8AawAgAE8ASwAgACIAIAArACAAKABHAGUAdAAtAEQAYQB0AGUAKQApAA=="
+                                                         }
+                                                     ]
+                                       }
+                                   ]
+              }
+}
