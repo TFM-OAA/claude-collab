@@ -23,7 +23,7 @@ function Invoke-Lock([string]$event) {
       Where-Object { $_.Name -ne 'WORKING_NOW.txt' })
   }
   function Get-Owner {
-    if (Test-Path $lock) { ((Get-Content $lock -TotalCount 1) -replace '^OWNER=','').Trim() } else { $null }
+    if (Test-Path $lock) { ((Get-Content $lock -TotalCount 1) -replace '^﻿','' -replace '^OWNER=','').Trim() } else { $null }
   }
   function Set-Claim {
     $ts   = Get-Date -Format 'yyyy-MM-dd HH:mm'

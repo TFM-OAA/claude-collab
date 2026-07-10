@@ -12,7 +12,7 @@ ME="$(id -un 2>/dev/null || printf '%s' "$USER")"
 SETTLE="${LOCK_SETTLE_SECONDS:-10}"
 
 copies() { ls -1 "$DIR"/WORKING_NOW*.txt 2>/dev/null | grep -v '/WORKING_NOW\.txt$'; }
-lock_owner() { [ -f "$LOCK" ] && head -n1 "$LOCK" 2>/dev/null | sed 's/^OWNER=//' | tr -d '\r\n'; }
+lock_owner() { [ -f "$LOCK" ] && head -n1 "$LOCK" 2>/dev/null | LC_ALL=C tr -d '\357\273\277\r\n' | sed 's/^OWNER=//'; }
 esc() { printf '%s' "$1" | sed 's/\\/\\\\/g; s/"/\\"/g'; }
 emit_start() { printf '{"hookSpecificOutput":{"hookEventName":"SessionStart","additionalContext":"%s"}}' "$(esc "$1")"; }
 emit_deny() { printf '{"hookSpecificOutput":{"hookEventName":"PreToolUse","permissionDecision":"deny","permissionDecisionReason":"%s"}}' "$(esc "$1")"; }
