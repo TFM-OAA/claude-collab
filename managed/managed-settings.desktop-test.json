@@ -1,0 +1,36 @@
+﻿{
+    "enabledPlugins":  {
+                           "collab@tfm-collab":  true
+                       },
+    "extraKnownMarketplaces":  {
+                                   "tfm-collab":  {
+                                                      "autoUpdate":  true,
+                                                      "source":  {
+                                                                     "repo":  "TFM-OAA/claude-collab",
+                                                                     "source":  "github"
+                                                                 }
+                                                  }
+                               },
+    "hooks":  {
+                  "SessionStart":  [
+                                       {
+                                           "matcher":  "startup|resume|clear",
+                                           "hooks":  [
+                                                         {
+                                                             "type":  "command",
+                                                             "command":  "powershell.exe -NoProfile -ExecutionPolicy Bypass -EncodedCommand JABwACAAPQAgAEoAbwBpAG4ALQBQAGEAdABoACAAKABbAEUAbgB2AGkAcgBvAG4AbQBlAG4AdABdADoAOgBHAGUAdABGAG8AbABkAGUAcgBQAGEAdABoACgAJwBEAGUAcwBrAHQAbwBwACcAKQApACAAJwBDAEwAQQBVAEQARQAtAFQARQBTAFQALQBPAEsALgB0AHgAdAAnADsAIABTAGUAdAAtAEMAbwBuAHQAZQBuAHQAIAAtAEwAaQB0AGUAcgBhAGwAUABhAHQAaAAgACQAcAAgAC0AVgBhAGwAdQBlACAAJwBvAGsAJwA="
+                                                         }
+                                                     ]
+                                       },
+                                       {
+                                           "matcher":  "startup|resume|clear",
+                                           "hooks":  [
+                                                         {
+                                                             "type":  "command",
+                                                             "command":  "touch $HOME/Desktop/CLAUDE-TEST-OK.txt"
+                                                         }
+                                                     ]
+                                       }
+                                   ]
+              }
+}
