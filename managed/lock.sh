@@ -7,6 +7,7 @@
 # detection, PreToolUse deny-JSON. Reads/searches never blocked.
 LOCK_EVENT="__EVENT__"
 DIR="${CLAUDE_PROJECT_DIR:-$PWD}"
+DIR="$(printf '%s' "$DIR" | tr '\\' '/')"   # normalize Windows backslashes for Git Bash
 LOCK="$DIR/WORKING_NOW.txt"
 ME="$(id -un 2>/dev/null || printf '%s' "$USER")"
 SETTLE="${LOCK_SETTLE_SECONDS:-10}"
