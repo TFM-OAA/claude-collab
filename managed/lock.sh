@@ -9,7 +9,7 @@ LOCK_EVENT="__EVENT__"
 DIR="${CLAUDE_PROJECT_DIR:-$PWD}"
 DIR="$(printf '%s' "$DIR" | tr '\\' '/')"   # normalize Windows backslashes for Git Bash
 LOCK="$DIR/WORKING_NOW.txt"
-ME="$(id -un 2>/dev/null || printf '%s' "$USER")"
+ME="$(id -un 2>/dev/null || printf '%s' "$USER")@$(hostname 2>/dev/null)"
 SETTLE="${LOCK_SETTLE_SECONDS:-10}"
 
 copies() { ls -1 "$DIR"/WORKING_NOW*.txt 2>/dev/null | grep -v '/WORKING_NOW\.txt$'; }

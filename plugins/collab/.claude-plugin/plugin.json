@@ -1,6 +1,6 @@
 {
   "name": "collab",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Автоматический LOCK-замок совместной работы (WORKING_NOW.txt) на хуках Claude Code + команды /lock–/unlock, для работы по очереди в папках, синхронизируемых через Google Drive. Always-on: при включённом плагине замок ставится сам в каждой открытой папке (Windows) — ручной setup-collab не нужен.",
   "author": {
     "name": "Topface Media"

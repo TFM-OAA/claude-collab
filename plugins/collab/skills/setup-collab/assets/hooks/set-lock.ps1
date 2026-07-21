@@ -11,7 +11,7 @@ $dir = $env:CLAUDE_PROJECT_DIR
 if (-not $dir) { $dir = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path }
 
 $lock = Join-Path $dir 'WORKING_NOW.txt'
-$me   = $env:USERNAME
+$me   = "$env:USERNAME@$env:COMPUTERNAME"
 
 $settle = 10
 if ($env:LOCK_SETTLE_SECONDS) { $settle = [int]$env:LOCK_SETTLE_SECONDS }

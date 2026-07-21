@@ -8,7 +8,7 @@ $dir = $env:CLAUDE_PROJECT_DIR
 if (-not $dir) { $dir = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path }
 
 $lock = Join-Path $dir 'WORKING_NOW.txt'
-$me   = $env:USERNAME
+$me   = "$env:USERNAME@$env:COMPUTERNAME"
 
 if (Test-Path $lock) {
   $owner = ((Get-Content $lock -TotalCount 1) -replace '^OWNER=','').Trim()
